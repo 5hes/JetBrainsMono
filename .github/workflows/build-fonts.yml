@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [ 3.14 ]
+        python-version: [ 3.8 ]
     name: Build Fonts
     steps:
       - name: Check out JetBrains Mono source repository
