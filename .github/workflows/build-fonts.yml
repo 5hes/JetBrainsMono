@@ -11,13 +11,14 @@ on:
       - master
     paths:
       - sources/**
+  workflow_dispatch:
 
 jobs:
   static-font-ci-job:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [ 3.8 ]
+        python-version: [ 3.14 ]
     name: Build Fonts
     steps:
       - name: Check out JetBrains Mono source repository
