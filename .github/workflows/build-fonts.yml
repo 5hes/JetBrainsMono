@@ -23,6 +23,10 @@ jobs:
     steps:
       - name: Check out JetBrains Mono source repository
         uses: actions/checkout@v4
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install libgit2-dev -y
       - name: Set up Python v${{ matrix.python-version }} environment
         uses: actions/setup-python@v6
         with:
